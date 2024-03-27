@@ -1,1 +1,5 @@
-<h1>Hi</h1>
+# What's that function
+
+## Clojure.core
+* [juxt](/clojure.core/juxt)
+* [identiy](/clojure.core/identity)
