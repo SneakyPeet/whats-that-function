@@ -2,9 +2,9 @@
 layout: page
 fn: juxt
 lib: clojure.core
-backgroundcolor: #99d1db
-headingcolor: #ee84e3
-fncolor: #ffb788
+backgroundcolor: "#99d1db"
+headingcolor: "#ee84e3"
+fncolor: "#ffb788"
 
 ---
 

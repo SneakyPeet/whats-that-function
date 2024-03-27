@@ -2,9 +2,9 @@
 layout: page
 fn: identity
 lib: clojure.core
-backgroundcolor: #ff7952
-headingcolor: #ff7952
-fncolor: #f3ff55
+backgroundcolor: "#ff7952"
+headingcolor: "#ff7952"
+fncolor: "#f3ff55"
 
 ---
 
