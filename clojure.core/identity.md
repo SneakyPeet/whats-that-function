@@ -1,10 +1,10 @@
 ---
 layout: page
-title: identity
+fn: identity
 lib: clojure.core
-background-color: #ff7952
-heading-color: #ff7952
-fn-color: #f3ff55
+backgroundcolor: #ff7952
+headingcolor: #ff7952
+fncolor: #f3ff55
 
 ---
 
@@ -71,4 +71,3 @@ It can also act as a no-op. In this case the transform function will always roun
 ```
 
 So even though it seems strange at first glance, the identity function have lots of application in the functional world.
-

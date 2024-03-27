@@ -1,5 +1,5 @@
 # What's that function
 
 ## Clojure.core
-* [juxt](/clojure.core/juxt)
-* [identiy](/clojure.core/identity)
+* [juxt](/whats-that-function/clojure.core/juxt)
+* [identity](/whats-that-function/clojure.core/identity)

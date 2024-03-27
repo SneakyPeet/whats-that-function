@@ -1,10 +1,10 @@
 ---
 layout: page
-title: juxt
+fn: juxt
 lib: clojure.core
-background-color: #99d1db
-heading-color: #ee84e3
-fn-color: #ffb788
+backgroundcolor: #99d1db
+headingcolor: #ee84e3
+fncolor: #ffb788
 
 ---
 
@@ -27,9 +27,9 @@ In this example we want to return the result of some math functions applied to t
    (mod a b)
    (max a b)
    (min a b)])
- 
+
  (do-math 6 3)
- 
+
  => [9 3 18 2 0 6 3]
 ```
 
@@ -56,13 +56,13 @@ More practically, juxt can be used to extract certain values from a collection o
    {:id 5 :name "Aden"  :age 5}
    {:id 6 :name "Alex"  :age 7}]
   (map (juxt :id :name)))
-  
-=> 
-([1 "John"] 
- [2 "Gale"] 
- [3 "Zoe"]  
- [4 "Diana"] 
- [5 "Aden"] 
+
+=>
+([1 "John"]
+ [2 "Gale"]
+ [3 "Zoe"]
+ [4 "Diana"]
+ [5 "Aden"]
  [6 "Alex"])
 ```
 
@@ -113,7 +113,7 @@ It is also handy if you want to sort by more than one property, in this case by 
         {:id 5 :name "Aden"  :age 5}
         {:id 6 :name "Alex"  :age 7}]
        (sort-by (juxt :age :name))))
-     
+
 =>
 ({:id 5 :name "Aden"  :age 5}
  {:id 2 :name "Gale"  :age 5}
