@@ -7,11 +7,20 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.0/css/bulma.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/panda-syntax-dark.min.css">
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/panda-syntax-dark.min.css"> -->
 
     {% include head-custom.html %}
   </head>
   <body>
+
+    <nav class="navbar" role="navigation" aria-label="main navigation">
+      <div class="navbar-brand">
+        <a class="navbar-item" href="/whats-that-function" style="color=black; background-color:{{page.headingcolor}}">
+          WHAT'S THAT FUNCTION
+        </a>
+      </div>
+    </nav>
+
     <section class="section">
 
       <div class="container.content">
@@ -21,11 +30,11 @@
       </div>
     </section>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script> -->
 
     <!-- and it's easy to individually load additional languages -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/clojure.min.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/clojure.min.js"></script> -->
 
-    <script>hljs.highlightAll();</script>
+    <!-- <script>hljs.highlightAll();</script> -->
   </body>
 </html>
