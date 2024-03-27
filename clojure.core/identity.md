@@ -2,13 +2,11 @@
 layout: page
 fn: identity
 lib: clojure.core
-backgroundcolor: "#ff7952"
+backgroundcolor: "#75d7ce"
 headingcolor: "#ff7952"
 fncolor: "#f3ff55"
 
 ---
-
-## Overview
 
 **Identity!** A function that takes what you give it, and just gives it back.
 

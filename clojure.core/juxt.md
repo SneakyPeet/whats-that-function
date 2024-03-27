@@ -8,7 +8,6 @@ fncolor: "#ffb788"
 
 ---
 
-## Overview
 
 **Juxt!** A higher order function that takes one or more functions as arguments, and returns a function.
 
