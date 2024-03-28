@@ -24,6 +24,11 @@
                     border: 10px solid #75d7ce;
                     border-radius: 0px 0px 10px 10px;">
           {{site.domain}}
+
+          {% for fns in site.functions %}
+          <p>{{ fns.fn }}</p>
+          {% endfor %}
+
           <!-- {{ content }} -->
         </div>
       </div>

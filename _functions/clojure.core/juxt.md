@@ -2,9 +2,11 @@
 layout: fn
 fn: juxt
 lib: clojure.core
+lang: clojure
 backgroundcolor: "#99d1db"
 headingcolor: "#ee84e3"
 fncolor: "#ffb788"
+youtube: https://youtube.com/
 published: true
 date: 2023-03-28 00:00:00
 ---
