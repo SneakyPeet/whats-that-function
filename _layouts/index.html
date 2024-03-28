@@ -11,7 +11,7 @@
     {% include head-custom.html %}
   </head>
   <body>
-    <section class="hero is-small mb-4" style="background-color: #75d7ce;">
+    <section class="hero is-small mb-3" style="background-color: #75d7ce;">
       <div class="hero-body">
         <p class="title" style="color: #ff3900; ">WHAT'S THAT <span style="background-color: #f3ff55; padding: 5px 20px">FUNCTION</span></p>
 
@@ -27,25 +27,26 @@
                    border-left: 15px solid {{fn.headingcolor}};
                    border-right 15px solid {{fn.fncolor}};
                    padding-top: 5px;">
-            {{fn.fn}}
+            <span style="color: #646464;">{{fn.lib}}</span>
+            <span class="p-1" style="background-color: {{fn.fncolor}}">{{fn.fn}}</span>
           </a>
           {% endfor %}
         </div>
-        <!--
-             <div class="grid is-col-min-12">
+
+        <!-- <div class="grid is-col-min-12">
              <a href="{{site.domain}}{{fn.url}}"
              class="cell p-2 is-size-5" style="background-color: #99d1db; color: black; font-weight: bold;
              border-left: 15px solid #ee84e3;
              border-right: 15px solid #ffb788;
              ">
-             juxt
+             <span style="color: #646464;">clojure.core</span><span class="p-1" style="background-color: #f3ff55">juxt</span>
              </a>
              <a href="{{site.domain}}{{fn.url}}"
              class="cell p-2 is-size-5" style="background-color: #99d1db; color: black; font-weight: bold;
              border-left: 15px solid #ee84e3;
              border-right: 15px solid #ffb788;
              ;">
-             identity
+             <span>floop/</span>identity
              </a>
              <a href="{{site.domain}}{{fn.url}}"
              class="cell p-2 is-size-5" style="background-color: #99d1db; color: black; font-weight: bold;
@@ -54,8 +55,8 @@
              ;">
              partition-all
              </a>
-             </div>
-        -->
+             </div> -->
+
       </div>
     </section>
   </body>
