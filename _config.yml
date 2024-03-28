@@ -7,6 +7,6 @@ collections:
     sort_by: fn
     permalink: /:path
 
-domain: https://sneakypeet.github.io/whats-that-function/
+domain: https://sneakypeet.github.io/whats-that-function
 
 google_analytics:
