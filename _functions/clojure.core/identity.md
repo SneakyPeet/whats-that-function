@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: fn
 fn: identity
 lib: clojure.core
 backgroundcolor: "#75d7ce"

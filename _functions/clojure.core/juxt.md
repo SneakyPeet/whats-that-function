@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: fn
 fn: juxt
 lib: clojure.core
 backgroundcolor: "#99d1db"

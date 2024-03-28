@@ -1,9 +1,12 @@
-title: Modernist theme
-description: Modernist is a theme for GitHub Pages.
+title: What's that function
+description: Quick and dirty coding tutorial videos
 show_downloads: false
 collections:
   functions:
     output: true
     sort_by: fn
     permalink: /:path
+
+domain: https://sneakypeet.github.io/whats-that-function/
+
 google_analytics:
