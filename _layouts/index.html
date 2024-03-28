@@ -11,27 +11,67 @@
     {% include head-custom.html %}
   </head>
   <body>
-    <section class="hero is-small" style="background-color: #75d7ce; border-radius: 10px 10px 0 0;">
+    <section class="hero is-small" style="background-color: #75d7ce; border-radius: 10px;">
       <div class="hero-body">
         <p class="title" style="color: #ff3900; ">WHAT'S THAT <span style="background-color: #f3ff55; padding: 5px 20px">FUNCTION</span></p>
 
       </div>
     </section>
     <section class="">
-      <div class=" content">
-        <div style="background-color: #710f6f;
-                    padding: 1rem;
-                    border: 10px solid #75d7ce;
-                    border-radius: 0px 0px 10px 10px;">
-          {{site.domain}}
+      <!-- <div class=" content">
+           <div style="background-color: #710f6f;
+           padding: 1rem;
+           border: 10px solid #75d7ce;
+           border-radius: 0px 0px 10px 10px;">
 
-          {% for fns in site.functions %}
-          <p>{{ fns.fn }}</p>
+
+
+           <!-- {{ content }} -->
+      </div>
+      </div> -->
+      <div class="content">
+
+        <div class="grid is-col-min-12">
+          {% for fn in site.functions %}
+          <a src="{{site.domain}}{{fn.url}}"
+            class="cell p-5" style="background-color: {{fn.backgroundcolor}}; color: black; font-weight: bold; border-radius: 10px">
+
+            <span class="p-2" style="background-color: {{fn.fncolor}}">juxt</span>
+
+            clojure.core
+          </a>
+          <a  src="{{site.domain}}{{fn.url}}"
+            class="cell pb-1 is-size-4" style="background-color: {{fn.backgroundcolor}}; color: black; font-weight: bold; border-left: 5px solid {{fn.headingcolor}}; padding-top: 5px;">
+            <span class="p-2 pr-5 pl-5" style="background-color: {{fn.fncolor}}">{{fn.fn}}</span><br/>
+            <span class="p-2 is-size-5"> {{fn.lib}}</span>
+          </a>
           {% endfor %}
 
-          <!-- {{ content }} -->
         </div>
+
       </div>
+      <!-- <div class=" content">
+           <div class="grid is-col-min-12">
+
+           <a  src="{{site.domain}}{{fn.url}}"
+           class="cell pb-1 is-size-4" style="background-color: {{fn.backgroundcolor}}; color: black; font-weight: bold; border-left: 5px solid {{fn.headingcolor}}; padding-top: 5px;">
+           <span class="p-2 pr-5 pl-5" style="background-color: {{fn.fncolor}}">juxt</span><br/>
+           <span class="p-2 is-size-5"> clojure.core</span>
+           </a>
+
+           <a class="cell pb-1 is-size-4" style="background-color: #75d7ce; color: black; font-weight: bold; border-left: 5px solid #ff7952; padding-top: 5px;">
+           <span class="p-2 pr-5 pl-5" style="background-color: #f3ff55">juxt</span><br/>
+           <span class="p-2 is-size-5"> clojure.core</span>
+           </a>
+
+           <a class="cell pb-1 is-size-4" style="background-color: #75d7ce; color: black; font-weight: bold; border-left: 5px solid #ff7952; padding-top: 5px;">
+           <span class="p-2 pr-5 pl-5" style="background-color: #f3ff55">juxt</span><br/>
+           <span class="p-2 is-size-5"> clojure.core</span>
+           </a>
+
+           </div>
+           </div> -->
+
     </section>
   </body>
 </html>
