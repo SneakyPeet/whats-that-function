@@ -5,4 +5,5 @@ collections:
   functions:
     output: true
     sort_by: fn
+    permalink: /:path
 google_analytics:
