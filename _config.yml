@@ -1,4 +1,8 @@
 title: Modernist theme
 description: Modernist is a theme for GitHub Pages.
 show_downloads: false
+collections:
+  functions:
+    output: true
+    sort_by: fn
 google_analytics:

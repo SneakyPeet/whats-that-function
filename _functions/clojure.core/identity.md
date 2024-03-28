@@ -5,7 +5,8 @@ lib: clojure.core
 backgroundcolor: "#75d7ce"
 headingcolor: "#ff7952"
 fncolor: "#f3ff55"
-
+published: true
+date: 2023-03-28 00:00:00
 ---
 
 **Identity!** A function that takes what you give it, and just gives it back.
