@@ -11,7 +11,7 @@
     {% include head-custom.html %}
   </head>
   <body>
-    <section class="hero is-small" style="background-color: #75d7ce; border-radius: 10px;">
+    <section class="hero is-small mb-4" style="background-color: #75d7ce;">
       <div class="hero-body">
         <p class="title" style="color: #ff3900; ">WHAT'S THAT <span style="background-color: #f3ff55; padding: 5px 20px">FUNCTION</span></p>
 
@@ -23,12 +23,39 @@
         <div class="grid is-col-min-12">
           {% for fn in site.functions %}
           <a href="{{site.domain}}{{fn.url}}"
-            class="cell pb-1 is-size-4" style="background-color: {{fn.backgroundcolor}}; color: black; font-weight: bold; border-left: 5px solid {{fn.headingcolor}}; padding-top: 5px;">
-            <span class="p-2 pr-5 pl-5" style="background-color: {{fn.fncolor}}">{{fn.fn}}</span><br/>
-            <span class="p-2 is-size-5"> {{fn.lib}}</span>
+            class="cell p-2 is-size-5" style="background-color: {{fn.backgroundcolor}}; color: black; font-weight: bold;
+                   border-left: 15px solid {{fn.headingcolor}};
+                   border-right 15px solid {{fn.fncolor}};
+                   padding-top: 5px;">
+            {{fn.fn}}
           </a>
           {% endfor %}
         </div>
+        <!--
+             <div class="grid is-col-min-12">
+             <a href="{{site.domain}}{{fn.url}}"
+             class="cell p-2 is-size-5" style="background-color: #99d1db; color: black; font-weight: bold;
+             border-left: 15px solid #ee84e3;
+             border-right: 15px solid #ffb788;
+             ">
+             juxt
+             </a>
+             <a href="{{site.domain}}{{fn.url}}"
+             class="cell p-2 is-size-5" style="background-color: #99d1db; color: black; font-weight: bold;
+             border-left: 15px solid #ee84e3;
+             border-right: 15px solid #ffb788;
+             ;">
+             identity
+             </a>
+             <a href="{{site.domain}}{{fn.url}}"
+             class="cell p-2 is-size-5" style="background-color: #99d1db; color: black; font-weight: bold;
+             border-left: 15px solid #ee84e3;
+             border-right: 15px solid #ffb788;
+             ;">
+             partition-all
+             </a>
+             </div>
+        -->
       </div>
     </section>
   </body>
