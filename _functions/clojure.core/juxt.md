@@ -72,7 +72,7 @@ More practically, juxt can be used to extract certain values from a collection o
 
 The previous example can easily be expanded into a value lookup
 
-```
+```clojure
 (def persons
   (->> [{:id 1 :name "John"  :age 5}
         {:id 2 :name "Gale"  :age 5}
