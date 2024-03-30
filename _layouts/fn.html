@@ -6,7 +6,7 @@
     <title>{{page.title}}! What's that function?</title>
   </head>
   <body>
-    <!--
+    <!-- OLD
          <nav class="navbar" role="navigation" aria-label="main navigation" style="background-color: {{page.backgroundcolor}};">
          <div class="navbar-brand">
          <a class="navbar-item has-text-weight-bold" href="/whats-that-function" style="color: black; background-color:{{page.headingcolor}};">
@@ -15,15 +15,18 @@
          </div>
          </nav>
     -->
-    <section class="hero is-small" style="background-color: {{page.backgroundcolor}}; border-top: 10px solid {{page.headingcolor}}; padding-top: 9px;
-                    ">
-      <a href="{{site.domain}}" class="hero-body pt-0 pb-0"">
-        <p class="title" style="color: black;"><span style="background-color: {{page.fncolor}};
-                                                            padding: 0.5rem 1.5rem;">{{page.fn}}</span></p>
-        <p class="subtitle" style="color: #646464; padding: 0.5rem;">{{page.lib}}</p>
+    <!--  ALSO OLD
+         <section class="hero is-small" style="background-color: {{page.backgroundcolor}}; border-top: 10px solid {{page.headingcolor}}; padding-top: 9px;
+         ">
+         <a href="{{site.domain}}" class="hero-body pt-0 pb-0"">
+         <p class="title" style="color: black;"><span style="background-color: {{page.fncolor}};
+         padding: 0.5rem 1.5rem;">{{page.fn}}</span></p>
+         <p class="subtitle" style="color: #646464; padding: 0.5rem;">{{page.lib}}</p>
 
-      </a>
-    </section>
+         </a>
+         </section> -->
+
+    {% include heading.html %}
 
 
     <section class="section">
