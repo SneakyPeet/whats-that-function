@@ -2,8 +2,7 @@
 <html class="theme-dark">
   <head>
     {% include head.html %}
-    {% include fonts.html %}
-    <title>{{page.title}}! What's that function?</title>
+    <title>{{page.title}}! {{site.title}</title>
   </head>
   <body>
     <!-- OLD
@@ -26,7 +25,7 @@
          </a>
          </section> -->
 
-    {% include heading.html %}
+    {% include heading.html backgroundcolor=page.backgroundcolor headingcolor=page.headingcolor fncolor=page.fncolor %}
 
 
     <section class="section">
