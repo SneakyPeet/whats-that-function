@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg viewBox="-376.451 -177.693 1822 888" xmlns="http://www.w3.org/2000/svg" xmlns:bx="https://boxy-svg.com">
+  <defs>
+    <style bx:fonts="JetBrains Mono">@import url(https://fonts.googleapis.com/css2?family=JetBrains+Mono%3Aital%2Cwght%400%2C100%3B0%2C200%3B0%2C300%3B0%2C400%3B0%2C500%3B0%2C600%3B0%2C700%3B0%2C800%3B1%2C100%3B1%2C200%3B1%2C300%3B1%2C400%3B1%2C500%3B1%2C600%3B1%2C700%3B1%2C800&amp;display=swap);</style>
+  </defs>
+  <rect x="-376.451" y="-177.693" width="1822" height="377.693" style="stroke: rgb(0, 0, 0); stroke-width: 0px; fill: rgb(255, 57, 0);"/>
+  <rect x="-376.45" y="200" width="1822" height="510.307" style="stroke: rgb(0, 0, 0); fill: rgb(117, 215, 206); stroke-width: 0px;"/>
+  <rect x="61.861" y="200" width="800" height="101.781" style="stroke: rgb(0, 0, 0); fill: rgb(243, 255, 85); stroke-width: 0px;" transform="matrix(1, 0.000469, 0, 1, -17.049698, -0.029013)"/>
+  <text style="font-family: 'JetBrains Mono'; font-size: 55px; font-weight: 600; white-space: pre;" x="105.491" y="272.128">What's That Function?</text>
+</svg>

@@ -2,6 +2,7 @@
 <html class="theme-dark">
   <head>
     {% include head.html %}
+    {% include fonts.html %}
     <title>{{page.title}}! What's that function?</title>
   </head>
   <body>
@@ -39,6 +40,12 @@
       </div>
     </section>
     <style>
+     pre.highlight {
+       font-family: "JetBrains Mono", monospace;
+       font-optical-sizing: auto;
+       font-weight: 400;
+       font-style: normal;
+     };
      pre.highlight .k {color: {{page.backgroundcolor}};}
      pre.highlight .nb {color: {{page.backgroundcolor}};}
      pre.highlight .nf {color: {{page.backgroundcolor}};}
