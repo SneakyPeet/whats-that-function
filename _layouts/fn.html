@@ -27,9 +27,6 @@
 
     {% include heading.html backgroundcolor=page.backgroundcolor headingcolor=page.headingcolor fncolor=page.fncolor %}
 
-    <h2 class="title is-size-6 pl-4 pr-4">{{page.lib}}/<span class="p-3" style="background-color: {{page.fncolor}}">{{page.fn}}</span></h2>
-
-
     <section class="section">
       <div class="container content">
         <div class="mb-5">
@@ -40,6 +37,9 @@
                    aspect-ratio: 16 / 9;"
             src="{{page.youtube}}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
         </div>
+        <h2 class="title is-size-5 mt-5">
+          <span class="p-1 pl-2 pr-2" style="background-color: {{page.fncolor}}; color: black;">juxt</span>
+          <span> {{page.lib}}</span></h2>
         {{ content }}
       </div>
     </section>
