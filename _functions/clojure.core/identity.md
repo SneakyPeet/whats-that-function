@@ -11,7 +11,7 @@ published: true
 date: 2023-03-28 00:00:00
 ---
 
-**Identity!** A function that takes what you give it, and just gives it back.
+A function that takes what you give it, and just gives it back.
 
 * Give it a string, get the same string
 * Give it a hash-map, get the same hash-map
