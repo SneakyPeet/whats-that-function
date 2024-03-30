@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg" xmlns:bx="https://boxy-svg.com">
+  <defs>
+    <style bx:fonts="JetBrains Mono">@import url(https://fonts.googleapis.com/css2?family=JetBrains+Mono%3Aital%2Cwght%400%2C100%3B0%2C200%3B0%2C300%3B0%2C400%3B0%2C500%3B0%2C600%3B0%2C700%3B0%2C800%3B1%2C100%3B1%2C200%3B1%2C300%3B1%2C400%3B1%2C500%3B1%2C600%3B1%2C700%3B1%2C800&amp;display=swap);</style>
+  </defs>
+  <ellipse style="stroke: rgb(0, 0, 0); fill: rgb(117, 215, 206); stroke-width: 0px;" cx="250" cy="250" rx="250" ry="250" transform="matrix(1, 0, 0, 1, 0, 2.842170943040401e-14)"/>
+  <path style="stroke: rgb(0, 0, 0); fill: rgb(243, 255, 85); stroke-width: 0px;" d="M 4.867 200 C 218.296 200 279.091 200 494.142 200.504 M 494.565 200 C 503.636 230.447 501.975 300 488.843 323.537 C 481.639 346.529 468.378 377.766 449.412 400 C 443.911 409.879 419.97 438.502 378.784 464.917 C 349.552 485.938 310.718 500 255.231 500 C 190.886 500 175.107 491.481 135.968 473.013 C 94.173 453.292 90.804 445.012 63.944 417.481 C 46.021 399.111 25.651 369.58 13.795 334.867 C 2.068 300.53 -8.687 258.512 5.188 200" transform="matrix(1, 0, 0, 1, 0, 2.842170943040401e-14)"/>
+  <path style="stroke: rgb(0, 0, 0); stroke-width: 0px; fill: rgb(255, 57, 0);" d="M 4.437 203.773 L 495.54 204.491 C 497.028 204.249 486.996 166.938 486.146 167.077 L 14.874 166.653 C 13.929 166.314 3.071 203.469 4.437 203.773 Z" transform="matrix(1, 0, 0, 1, 0, 2.842170943040401e-14)"/>
+  <text style="font-family: 'JetBrains Mono'; font-size: 150px; font-weight: 800; white-space: pre;" transform="matrix(1.8936309814453125, 0, 0, 1.790374994277954, -103.99346160888672, -59.61500167846677)" x="100" y="235.931">λ?</text>
+</svg>
