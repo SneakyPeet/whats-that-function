@@ -37,8 +37,10 @@
                    aspect-ratio: 16 / 9;"
             src="{{page.youtube}}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
         </div>
-        <h2 class="title is-size-5 mt-5">
-          <span class="p-1 pl-2 pr-2" style="background-color: {{page.fncolor}}; color: black;">juxt</span>
+        <h2 class="title is-size-5 mt-5" style="font-family: JetBrains Mono, monospace;
+                   font-optical-sizing: auto;
+                   font-style: normal;">
+          <span class="p-1 pl-2 pr-2" style="background-color: {{page.fncolor}}; color: black;">{{page.fn}}</span>
           <span> {{page.lib}}</span></h2>
         {{ content }}
       </div>
