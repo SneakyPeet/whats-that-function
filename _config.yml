@@ -1,16 +1,18 @@
 title: What's That Function?
-description: Quick and simple coding tutorial videos
-show_downloads: false
-collections:
-  functions:
-    output: true
-    sort_by: fn
-    permalink: /:path
-
+tagline: Quick and simple coding tutorial videos
+description:
+logo: /assets/logo.png
 url: https://whats-that-function.com
+
+google_site_verification:
+  google:
 
 backgroundcolor: "#75d7ce"
 headingcolor: "#ff3900"
 fncolor: "#f3ff55"
 
-google_analytics:
+collections:
+  functions:
+    output: true
+    sort_by: fn
+    permalink: /:path

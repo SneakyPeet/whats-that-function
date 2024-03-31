@@ -1,4 +1,6 @@
 ---
+title: clojure.core/identity
+description: A function that takes what you give it, and just gives it back.
 layout: fn
 fn: identity
 lib: clojure.core

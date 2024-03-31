@@ -1,4 +1,6 @@
 ---
+title: clojure.core/juxt
+description: A higher order function that takes one or more functions as arguments, and returns a function. When calling the returned function with zero or more arguments, the arguments are passed to each of the functions originally passed to juxt, and the returned result is a vector containing each result from these functions.
 layout: fn
 fn: juxt
 lib: clojure.core

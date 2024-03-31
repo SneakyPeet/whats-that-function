@@ -1,4 +1,6 @@
 ---
+title: clojure.core/contains?
+description: TODO
 layout: fn
 fn: contains?
 lib: clojure.core
@@ -9,6 +11,7 @@ fncolor: "#f79cff"
 youtube: https://www.youtube.com/embed/jaI3Hcw-ZaA?si=W8FD78qqWOBGWkOI
 published: true
 date: 2023-03-28 00:00:00
+
 ---
 
 Something should go here
