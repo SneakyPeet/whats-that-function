@@ -29,19 +29,27 @@
 
     <section class="section pt-5">
       <div class="container content">
+
+
         <div class="mb-5">
           <iframe
+            id="fn-youtube"
+            src=""
+            data-src="{{page.youtube}}"
+
             style="border: 5px solid {{page.fncolor}};
-                   width: 100%;
-                   max-width: 700px;
-                   aspect-ratio: 16 / 9;"
-            src="{{page.youtube}}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                 width: 100%;
+                 max-width: 700px;
+                 aspect-ratio: 16 / 9;"
+            title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
         </div>
-        <h2 class="title is-size-6 mt-5" style="font-family: JetBrains Mono, monospace;
+
+
+        <h1 class="title is-size-6 mt-5" style="font-family: JetBrains Mono, monospace;
                    font-optical-sizing: auto;
                    font-style: normal;">
           <span class="p-1 pl-2 pr-2" style="background-color: {{page.fncolor}}; color: black;">{{page.fn}}</span>
-          <span> {{page.lib}}</span></h2>
+          <span> {{page.lib}}</span></h1>
         {{ content }}
       </div>
     </section>
@@ -68,5 +76,14 @@
     <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/clojure.min.js"></script> -->
 
     <!-- <script>hljs.highlightAll();</script> -->
+
+    <script type="application/javascript">
+     function init() {
+       var youtubeIframe = document.getElementsById('fn-youtube');
+       youtubeIframe.setAttribute('src', youtubeIframe.getAttribute('data-src'));
+     }
+
+     window.onload = init;
+    </script>
   </body>
 </html>
