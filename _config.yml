@@ -1,11 +1,10 @@
 title: What's That Function?
-tagline: Quick and simple coding tutorial videos
-description:
+description: Quick and simple coding tutorial videos
 logo: /assets/logo.png
 url: https://whats-that-function.com
 
-google_site_verification:
-  google:
+# google_site_verification:
+#   google:
 
 backgroundcolor: "#75d7ce"
 headingcolor: "#ff3900"
