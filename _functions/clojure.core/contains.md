@@ -4,7 +4,7 @@ description: TODO
 layout: fn
 fn: contains?
 lib: clojure.core
-lang: clojure
+programming_language: clojure
 backgroundcolor: "#ffba9f"
 headingcolor: "#7976fc"
 fncolor: "#f79cff"

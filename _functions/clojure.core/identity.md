@@ -4,7 +4,7 @@ description: A function that takes what you give it, and just gives it back.
 layout: fn
 fn: identity
 lib: clojure.core
-lang: clojure
+programming_language: clojure
 backgroundcolor: "#75d7ce"
 headingcolor: "#ff7952"
 fncolor: "#f3ff55"

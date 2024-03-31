@@ -4,7 +4,7 @@ description: A higher order function that takes one or more functions as argumen
 layout: fn
 fn: juxt
 lib: clojure.core
-lang: clojure
+programming_language: clojure
 backgroundcolor: "#99d1db"
 headingcolor: "#ee84e3"
 fncolor: "#ffb788"
