@@ -1,6 +1,6 @@
 ---
 title: clojure.core/contains?
-description: TODO
+description: Contains? is a predicate function that returns true if the provided collection contains the provided key.
 layout: fn
 fn: contains?
 lib: clojure.core
@@ -14,47 +14,78 @@ date: 2023-03-28 00:00:00
 
 ---
 
-Something should go here
+Contains? is a predicate function that returns `true` if the provided collection contains the provided key.
 
 ## Example 1
 
+Its simplest use case is checking if a hash set contains a value.
 
 ```clojure
-(contains? {:name "Pieter"} :name) => true
+(contains?
+  #{"Ann" "John" "Matt"}
+  "Matt")
+
+=> true
 ```
 
 ## Example 2
 
+Or if a hash map contains a certain key.
 
 ```clojure
-(contains? #{"Ann" "John" "Matt"} "Matt") => true
-```
+(contains?
+  {:name "Peter" :surname "Johnson"}
+  :name)
 
+=> true
+```
 
 ## Example 3
 
+Contains? can also be used with any keyed sequence, like vectors.
 
 ```clojure
-(contains? ["a" "b" "c"] 2)  => true
+(contains?
+  [1 3 5]
+  1)
+
+=> true
 ```
+
+However, it is important to remember that contains? cares about keys or indexes, not values. So in this example, even though 5 is a value in the vector, the vector only has 3 indexes namely 0, 1 and 2.
 
 ```clojure
-(contains? ["a" "b" "c"] 7)  => false
-```
+(contains?
+  [1 3 5]
+  5)
 
-```clojure
-(contains? ["a" "b" "c"] 4294967296)  => true
+=> false
 ```
-
-REMINDER MEME
 
 ## Example 4
 
+The same goes for strings.
+
 ```clojure
-(contains? (list "a" "b" "c") 2)  => IllegalArgumentException
+(contains? "abcde" 2)
+
+=> true
 ```
 
-REMINDER MEME
+```clojure
+(contains? "abcde" \a)
 
+=> IllegalArgumentException
+```
 
-REMINDER Check queue behaviour
+## Example 5
+
+Contains? can also be used for java arrays, however not for Clojure lists or queues as these are not keyed sequences.
+
+```clojure
+(contains?
+  (list "a" "b" "c")
+  2)
+
+=> IllegalArgumentException
+```
