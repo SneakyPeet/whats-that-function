@@ -15,7 +15,7 @@ layout: none
   {% for fn in site.functions %}
   {% unless fn.published == false %}
   <url>
-    <loc>{{ site.domain }}{{ fn.domain }}</loc>
+    <loc>{{ site.domain }}{{ fn.url }}</loc>
     <lastmod>{{ post.date | date_to_xmlschema }}</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
