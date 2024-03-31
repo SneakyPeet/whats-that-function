@@ -7,7 +7,7 @@ collections:
     sort_by: fn
     permalink: /:path
 
-domain: https://whats-that-function.com
+url: https://whats-that-function.com
 
 backgroundcolor: "#75d7ce"
 headingcolor: "#ff3900"

@@ -3,4 +3,4 @@ layout: none
 ---
 
 User-agent: *
-Sitemap: {{ site.domain }}/sitemap.xml
+Sitemap: {{ site.url }}/sitemap.xml
