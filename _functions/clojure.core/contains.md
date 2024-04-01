@@ -80,7 +80,7 @@ The same goes for strings.
 
 ## Example 5
 
-Contains? can also be used for java arrays, however not for Clojure lists or queues as these are not keyed sequences.
+Contains? can also be used for Java arrays, however not for Clojure lists or queues as these are not keyed sequences.
 
 ```clojure
 (contains?

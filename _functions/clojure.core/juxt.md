@@ -75,7 +75,7 @@ More practically, juxt can be used to extract certain values from a collection o
 The previous example can easily be expanded into a value lookup
 
 ```clojure
-(def persons
+(def people
   (->> [{:id 1 :name "John"  :age 5}
         {:id 2 :name "Gale"  :age 5}
         {:id 3 :name "Zoe"   :age 7}
@@ -85,11 +85,11 @@ The previous example can easily be expanded into a value lookup
        (map (juxt :id :name))
        (into {})))
 
-(get persons 1)
+(get people 1)
 
 => "John"
 
-(def persons
+(def people
   (->> [{:id 1 :name "John"  :age 5}
         {:id 2 :name "Gale"  :age 5}
         {:id 3 :name "Zoe"   :age 7}
@@ -99,7 +99,7 @@ The previous example can easily be expanded into a value lookup
        (map (juxt :id identity))
        (into {})))
 
-(get persons 3)
+(get people 3)
 
 => {:id 3 :name "Zoe" :age 7}
 ```
@@ -109,7 +109,7 @@ The previous example can easily be expanded into a value lookup
 It is also handy if you want to sort by more than one property, in this case by age first and then by name
 
 ```clojure
-(def persons
+(def people
   (->> [{:id 1 :name "John"  :age 5}
         {:id 2 :name "Gale"  :age 5}
         {:id 3 :name "Zoe"   :age 7}
