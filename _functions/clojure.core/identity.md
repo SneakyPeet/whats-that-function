@@ -73,4 +73,4 @@ It can also act as a no-op. In this case the transform function will always roun
 (transform 1.345345) => 1
 ```
 
-So even though it seems strange at first glance, the identity function have lots of application in the functional world.
+So even though it seems strange at first glance, the identity function has lots of application in the functional world.
