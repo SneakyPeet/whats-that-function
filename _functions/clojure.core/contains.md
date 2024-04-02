@@ -8,7 +8,7 @@ programming_language: clojure
 backgroundcolor: "#ffba9f"
 headingcolor: "#7976fc"
 fncolor: "#f79cff"
-youtube: https://youtu.be/aa2EjhUspFY
+youtube: https://www.youtube.com/watch?v=aa2EjhUspFY
 published: true
 date: 2023-04-02 00:00:00
 
