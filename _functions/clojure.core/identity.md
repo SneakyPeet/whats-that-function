@@ -8,9 +8,9 @@ programming_language: clojure
 backgroundcolor: "#75d7ce"
 headingcolor: "#ff7952"
 fncolor: "#f3ff55"
-youtube: https://www.youtube.com/embed/jaI3Hcw-ZaA?si=W8FD78qqWOBGWkOI
-published: false
-date: 2023-03-28 00:00:00
+youtube: https://www.youtube.com/embed/uY-grDIsRTs?si=JfRgB4M0EG2-8lEI
+published: true
+date: 2023-04-03 00:00:00
 ---
 
 A function that takes what you give it, and just gives it back.
