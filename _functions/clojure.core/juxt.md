@@ -8,9 +8,9 @@ programming_language: clojure
 backgroundcolor: "#99d1db"
 headingcolor: "#ee84e3"
 fncolor: "#ffb788"
-youtube: https://www.youtube.com/embed/jaI3Hcw-ZaA?si=W8FD78qqWOBGWkOI
-published: false
-date: 2023-03-28 00:00:00
+youtube: https://www.youtube.com/embed/6-SGdhYdMGE?si=drpG12T6pnsBKkFh
+published: true
+date: 2024-04-04 00:00:00
 ---
 
 
@@ -20,7 +20,7 @@ When calling the returned function with zero or more arguments, the arguments ar
 
 ## Example 1
 
-We'll start with a toy example to show the basic functionality. We want to return the result of various math functions applied to two values
+We'll start with a toy example to show the basic functionality. We want to return the result of various math functions applied to two numbers.
 
 ```clojure
 (defn do-math [a b]
@@ -106,7 +106,7 @@ We can expand on this idea and create a lookup using the into function.
 
 ### Example 4
 
-Juxt can be handy if you want to sort by more than one property, in this case we sort by age first and then by name.
+Juxt can be handy if you want to sort by more than one field, in this case we sort by age first and then by name.
 
 ```clojure
 (def people
