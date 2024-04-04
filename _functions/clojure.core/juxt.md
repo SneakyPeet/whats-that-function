@@ -20,7 +20,7 @@ When calling the returned function with zero or more arguments, the arguments ar
 
 ## Example 1
 
-In this example we want to return the result of some math functions applied to two values
+We'll start with a toy example to show the basic functionality. We want to return the result of various math functions applied to two values
 
 ```clojure
 (defn do-math [a b]
@@ -37,7 +37,7 @@ In this example we want to return the result of some math functions applied to t
  => [9 3 18 2 0 6 3]
 ```
 
-We can replace the function definition with juxt for a more concise version
+We can replace this with juxt for a more concise version.
 
 ```clojure
 (def do-math (juxt + - * / mod max min))
@@ -49,7 +49,7 @@ We can replace the function definition with juxt for a more concise version
 
 ## Example 2
 
-More practically, juxt can be used to extract certain values from a collection of hash-maps, in this case the id and the name.
+More practically, juxt can be used to extract certain values from a collection of hash-maps, in this case a persons id and name.
 
 ```clojure
 (->>
@@ -72,7 +72,7 @@ More practically, juxt can be used to extract certain values from a collection o
 
 ## Example 3
 
-The previous example can easily be expanded into a value lookup
+We can expand on this idea and create a lookup using the into function.
 
 ```clojure
 (def people
@@ -106,7 +106,7 @@ The previous example can easily be expanded into a value lookup
 
 ### Example 4
 
-It is also handy if you want to sort by more than one property, in this case by age first and then by name
+Juxt can be handy if you want to sort by more than one property, in this case we sort by age first and then by name.
 
 ```clojure
 (def people
