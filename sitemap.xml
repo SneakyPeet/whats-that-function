@@ -6,7 +6,7 @@ layout: none
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>{{site.url}}</loc>
-    <lastmod>2005-01-01</lastmod>
+    <lastmod>2024-04-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -16,7 +16,7 @@ layout: none
   {% unless fn.published == false %}
   <url>
     <loc>{{ site.url }}{{ fn.url }}</loc>
-    <lastmod>{{ post.date | date_to_xmlschema }}</lastmod>
+    <lastmod>{{ fn.date | date_to_xmlschema }}</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
