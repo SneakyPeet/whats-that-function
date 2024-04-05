@@ -18,11 +18,11 @@ comment is a macro that takes any number of expressions as arguments and returns
 
 The expressions are completely ignored, meaning they are not evaluated.
 
-Lets see why this is useful by first comparing the comment macro to other comment types in clojure
+Let's see why this is useful by first comparing the comment macro to other comment types in Clojure.
 
 ## Example 1
 
-To comment out a line, you can prefix it with one or more `;`.
+To comment out a line, you can prefix it with one or more semicolon.
 
 ```clojure
 ;; (defn hello [s]
@@ -32,7 +32,7 @@ To comment out a line, you can prefix it with one or more `;`.
 ;; (hello "Samantha?")
 ```
 
-You can use the ignore next form to comment out the entire next expression. This is chainable, making it easy to comment out multiple forms.
+Alternatively you can use the ignore next form to comment out the entire next expression. This is chain-able, making it easy to comment out multiple expressions.
 
 ```clojure
 #_#_#_
@@ -44,7 +44,7 @@ You can use the ignore next form to comment out the entire next expression. This
 
 ```
 
-The Clojure reader will completely ignore everything that is commented out and your editor will also indicate that fact by removing all syntax highlighting.
+The Clojure reader will completely ignore everything that is commented out and your editor will also indicate that fact by removing all syntax highlighting. Your code linter will also ignore any problems in the commented out code.
 
 ## Example 2
 
@@ -80,6 +80,7 @@ Because it is an expression, your editor will still highlight body of the commen
   )
 
 => nil
+```
 
 The Clojure reader will still try and read the body, without executing it. That means any invalid Clojure will cause the read to fail.
 
@@ -102,7 +103,7 @@ The Clojure reader will still try and read the body, without executing it. That 
 ## Example 3
 
 This makes the comment macro an excellent tool for documenting code usage, whilst still allowing the execution of the expressions in the body.
-You will often find it at the bottom of a namespace detailing how to use the namespace.
+You will often find it at the bottom of a namespace detailing how to use the namespace. Any breaking changes in the namespace, that is not updated in the comment will be indicated by the code linter or by read failure.
 
 ```clojure
 
@@ -113,11 +114,8 @@ You will often find it at the bottom of a namespace detailing how to use the nam
 
   (hello "World") ;=> "Hello World"
 
-  ,)
+  )
 ```
-
-If the comment body is lenghty, you can add a `,` before the closing bracket to indicate end of the comment. Clojure considers the `,` as whitespace.
-
 
 ## Example 4
 
