@@ -1,16 +1,16 @@
 ---
-title: clojure.core/contains?
-description: Contains? is a predicate function that returns true if the provided collection contains the provided key.
+title: clojure.core/comment
+description: TODO
 layout: fn
-fn: contains?
+fn: comment
 lib: clojure.core
 programming_language: clojure
-backgroundcolor: "#ffba9f"
-headingcolor: "#7976fc"
-fncolor: "#f79cff"
-youtube: https://www.youtube.com/embed/aa2EjhUspFY?si=LO0DFHHvlIu5Ezlw
-published: true
-date: 2024-04-02 00:00:00
+backgroundcolor: ""
+headingcolor: ""
+fncolor: "TODO"
+youtube: TODO
+published: false
+date: 2023-04-02 00:00:00
 
 ---
 
