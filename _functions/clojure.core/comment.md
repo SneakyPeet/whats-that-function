@@ -8,9 +8,9 @@ programming_language: clojure
 backgroundcolor: "#ff5b72"
 headingcolor: "#7ad4e0"
 fncolor: "#ffad5d"
-youtube: TODO
-published: false
-date: 2024-04-02 00:00:00
+youtube: https://www.youtube.com/embed/8RpvJeSbgcI?si=Xf7agj1lbUUboo7s
+published: true
+date: 2024-04-09 00:00:00
 
 ---
 The comment macro enables rich text comments that fits well into a repl driven development workflow.
