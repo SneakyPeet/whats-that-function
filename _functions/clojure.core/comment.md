@@ -5,20 +5,21 @@ layout: fn
 fn: comment
 lib: clojure.core
 programming_language: clojure
-backgroundcolor: ""
-headingcolor: ""
-fncolor: "TODO"
+backgroundcolor: "#ff5b72"
+headingcolor: "#7ad4e0"
+fncolor: "#ffad5d"
 youtube: TODO
 published: false
 date: 2024-04-02 00:00:00
 
 ---
+The comment macro enables rich text comments that fits well into a repl driven development workflow.
 
-comment is a macro that takes any number of expressions as arguments and returns nil.
+It takes any number of expressions as arguments and returns nil.
 
-The expressions are completely ignored, meaning they are not evaluated.
+The expressions in the comment body are not evaluated.
 
-Let's see why this is useful by first comparing the comment macro to other comment types in Clojure.
+Let's see why this is useful by first comparing the comment macro to other comment types.
 
 ## Example 1
 
@@ -49,7 +50,6 @@ The Clojure reader will completely ignore everything that is commented out and y
 ## Example 2
 
 The first big difference when using the comment macro, is that the comment is a valid expression and thus returns a result, which is always nil.
-This means it is best used as a top level form.
 
 ```clojure
 (comment
@@ -66,7 +66,7 @@ This means it is best used as a top level form.
 
 ```
 
-Because it is an expression, your editor will still highlight body of the comment and your code linter will still pickup any mistakes made.
+Because it is a valid expression, it will not be ignored. This means syntax highlighting will still be applied and any linting mistakes will be picked up.
 
 ```clojure
 (comment
@@ -82,7 +82,7 @@ Because it is an expression, your editor will still highlight body of the commen
 => nil
 ```
 
-The Clojure reader will still try and read the body, without executing it. That means any invalid Clojure will cause the read to fail.
+The Clojure reader will read the comment body, without executing it. That means any invalid Clojure will cause the read to fail.
 
 ```clojure
 (comment
@@ -102,10 +102,10 @@ The Clojure reader will still try and read the body, without executing it. That 
 
 ## Example 3
 
-This makes the comment macro an excellent tool for documenting code usage, whilst still allowing the execution of the expressions in the body.
-You will often find it at the bottom of a namespace detailing how to use the namespace. Any breaking changes in the namespace, that is not updated in the comment will be indicated by the code linter or by read failure.
+This makes the comment macro an excellent tool for documenting code usage, whilst ensuring validity of the examples and allowing for easy evaluation at the repl. You will often find it at the bottom of a namespace detailing how to use the namespace.
 
 ```clojure
+(ns example)
 
 (defn hello [s]
   (str "Hello " s))
@@ -113,34 +113,7 @@ You will often find it at the bottom of a namespace detailing how to use the nam
 (comment
 
   (hello "World") ;=> "Hello World"
+  (hello "Samantha?") ;=> "Hello Samantha?"
 
   )
-```
-
-## Example 4
-
-There are some libraries like [Rich Comment Tests](https://github.com/matthewdowney/rich-comment-tests) that allows you to execute your comment blocks as tests. This is very useful for unit testing namespace internals.
-
-```clojure
-
-^:rct/test
-(comment
-
-  (+ 1 1) ;=> 3
-
-  ,)
-
-(com.mjdowney.rich-comment-tests/run-ns-tests! *ns*)
-
-=>>
-
-; Testing com.mjdowney.rich-comment-tests.example
-;
-; FAIL in () (example.clj:4)
-; expected: (= (+ 1 1) 3)
-;   actual: (not (= 2 3))
-;
-; Ran 1 tests containing 2 assertions.
-; 1 failures, 0 errors.
-;=> {:test 1, :pass 1, :fail 1, :error 0}
 ```
