@@ -16,13 +16,13 @@ date: 2023-04-15 00:00:00
 
 conj, peek and pop are core functions that operate on various collection types.
 
-Given a collection and zero or more items, conj will return a new collection of the same type with the new items added.
+Given a collection and one or more items, conj will return a new collection of the same type with the new items added.
 
-Given a collection, pop will return a new collection of the same type, with one of the items removed.
+Pop will return a new collection of the same type, with one of the items removed.
 
-Finally peek will return the item that will be removed when pop is called.
+And peek will return the item that will be removed if pop is called.
 
-The resulting behaviour of these functions change based on the type of collection.
+The resulting behaviour of these functions changes based on the type of collection passed as an argument.
 
 ## Example 1
 
@@ -30,7 +30,7 @@ Given a vector, conj will add the new items to the end of the vector.
 
 Peek will return the item at the end of the vector. This behaves the same as the last function, but is much more efficient.
 
-Pop then removes the last item.
+Pop will remove the last item.
 
 ```clojure
 (def a [1 2 3])
@@ -72,7 +72,7 @@ Pop will remove the first item.
 
 Given a queue, conj will add the new items to the end of the queue.
 
-Peek will return the item a the start of the queue, similar to the first function.
+Peek will return the item at the start of the queue, similar to the first function.
 
 Pop will remove the first item
 
@@ -98,7 +98,7 @@ Note that the #queue [] tagged literal is only available in Clojurescript. A que
 
 ## Example 4
 
-Here is a side by side comparison of the 3 list types. Queues are first in first out (fifo). Vectors and lists are first in last out (filo) and they can be used to represent a stack. Lists are more performant than vectors in this situation.
+Here is a side by side comparison of the 3 list types. Queues are first in, first out (fifo). Vectors and lists are first in, last out (filo) and they can be used to represent a stack. Lists are more performant than vectors in this situation.
 
 |        | Vectors   | Lists      | Queues           |
 |:------:|:---------:|:----------:|:----------------:|
@@ -107,3 +107,25 @@ Here is a side by side comparison of the 3 list types. Queues are first in first
 | peek   | 4         | 4          | 1                |
 | pop    | [1 2 3]   | '(1 2 3)   | #queue [2 3 4]   |
 |        | FILO      | FILO       | FIFO             |
+
+# Example 5
+
+As shown peek and pop can only be used on IPersistentStack types. conj however can be used on various other collection types like hash-maps and hash-sets.
+
+It also has some interesting behaviour when called with nil or no arguments.
+
+```clojure
+(conj {:a 1} {:b 2 :c 3})    ;=> {:a 1 :b 2 :c 3}
+
+(conj {:a 1} [:b 2] [:c 3])  ;=> {:a 1 :b 2 :c 3}
+
+(conj #{:a} :b :c)           ;=> #{:c :a :b}
+
+(conj (sorted-set :a) :c :b) ;=> #{:a :b :c}
+
+(conj)                       ;=> []
+
+(conj [])                    ;=> []
+
+(conj nil 1)                 ;=> '(1)
+```
