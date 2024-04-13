@@ -5,11 +5,12 @@ layout: fn
 fn: conj peek pop
 lib: clojure.core
 programming_language: clojure
-backgroundcolor: ""
-headingcolor: ""
-fncolor: "TODO"
+backgroundcolor: "#7de6a1"
+headingcolor: "#f9f88b"
+fncolor: "#f9646e"
 youtube: TODO
-published: false
+published: true
+live: false
 date: 2023-04-15 00:00:00
 
 ---

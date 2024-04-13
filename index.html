@@ -41,6 +41,9 @@ layout: none
 
         <nav class="grid is-col-min-12">
           {% for fn in site.functions %}
+            {% if fn.live == false %}
+              {% continue %}
+            {% else %}
           <a href="{{fn.url}}"
             class="cell p-2 is-size-6" style="background-color: {{fn.backgroundcolor}}; color: black;
                    border-left: 15px solid {{fn.headingcolor}};
@@ -49,6 +52,7 @@ layout: none
             <span style="color: #646464;">{{fn.lib}}</span>
             <span class="p-1" style="background-color: {{fn.fncolor}}; font-weight: bold;">{{fn.fn}}</span>
           </a>
+            {% endif %}
           {% endfor %}
         </nav>
 
