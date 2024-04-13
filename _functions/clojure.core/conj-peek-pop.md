@@ -1,6 +1,6 @@
 ---
 title: clojure.core list operations - conj peek pop
-description: TODO
+description: conj, peek and pop are core functions that operate on various collection types and provide stack semantics.
 layout: fn
 fn: conj peek pop
 lib: clojure.core

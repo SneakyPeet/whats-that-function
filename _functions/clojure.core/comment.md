@@ -1,6 +1,6 @@
 ---
 title: clojure.core/comment
-description: TODO
+description: The comment macro enables rich text comments that fits well into a repl driven development workflow.
 layout: fn
 fn: comment
 lib: clojure.core
