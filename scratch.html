@@ -1,0 +1,85 @@
+---
+layout: none
+
+---
+
+<!DOCTYPE html>
+<html class="theme-dark">
+  <head>
+    {% include head.html %}
+  </head>
+  <body style="font-family: JetBrains Mono, monospace;
+    font-optical-sizing: auto;
+    font-style: normal;">
+
+    {% include heading.html backgroundcolor=site.backgroundcolor headingcolor=site.headingcolor fncolor=site.fncolor %}
+
+    <h2 class="title is-size-5 pl-4 pr-4 mt-5">{{site.description}}</h2>
+
+    <!-- ALSO OLD
+         <section class="hero is-small mb-3" style="background-color: #75d7ce; border-top: 10px solid #ff3900; padding-top: 9px;
+         ">
+         <a href="{{site.url}}" class="hero-body pt-0 pb-0"">
+         <p class="title is-size-5" style="color: black;"><span style="background-color: #f3ff55;
+         padding: 0.5rem 1.5rem;
+         text-transform: uppercase;">{{site.title}}</span></p>
+         <p class="subtitle" style="font-size: 1.2rem; padding: 0.5rem; color: #646464;">{{site.description}}</p>
+
+         </a>
+         </section> -->
+
+    <!-- OLD
+         <section class="hero is-small mb-2" style="background-color: #75d7ce;">
+         <div class="hero-body">
+         <p class="title" style="color: #ff3900; ">WHAT'S THAT <span style="background-color: #f3ff55; padding: 5px 20px">FUNCTION</span></p>
+
+         </div>
+         </section>
+    -->
+    <section class="" style="min-height: 48vh;">
+      <div class="content">
+
+        <nav class="grid is-col-min-12">
+          {% for fn in site.functions %}
+          <a href="{{fn.url}}"
+            class="cell p-2 is-size-6" style="background-color: {{fn.backgroundcolor}}; color: black;
+                   border-left: 15px solid {{fn.headingcolor}};
+                   border-right 15px solid {{fn.fncolor}};
+                   padding-top: 5px;">
+            <span style="color: #646464;">{{fn.lib}}</span>
+            <span class="p-1" style="background-color: {{fn.fncolor}}; font-weight: bold;">{{fn.fn}}</span>
+          </a>
+          {% endfor %}
+        </nav>
+
+        <!-- <div class="grid is-col-min-12">
+             <a href="{{site.url}}{{fn.url}}"
+             class="cell p-2 is-size-5" style="background-color: #99d1db; color: black;
+             border-left: 15px solid #ee84e3;
+             border-right: 15px solid #ffb788;
+             ">
+             <span style="color: #646464;">clojure.core</span><span class="p-1" style="background-color: #f3ff55; font-weight: bold;">juxt</span>
+             </a>
+             <a href="{{site.url}}{{fn.url}}"
+             class="cell p-2 is-size-5" style="background-color: #99d1db; color: black; font-weight: bold;
+             border-left: 15px solid #ee84e3;
+             border-right: 15px solid #ffb788;
+             ;">
+             <span>floop/</span>identity
+             </a>
+             <a href="{{site.url}}{{fn.url}}"
+             class="cell p-2 is-size-5" style="background-color: #99d1db; color: black; font-weight: bold;
+             border-left: 15px solid #ee84e3;
+             border-right: 15px solid #ffb788;
+             ;">
+             partition-all
+             </a>
+             </div> -->
+
+      </div>
+    </section>
+
+    {% include footer.html backgroundcolor=site.backgroundcolor headingcolor=site.headingcolor fncolor=site.fncolor %}
+
+  </body>
+</html>
