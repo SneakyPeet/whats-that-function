@@ -10,8 +10,8 @@ headingcolor: "#f9f88b"
 fncolor: "#f9646e"
 youtube: TODO
 published: true
-live: false
-date: 2023-04-15 00:00:00
+frontpage: false
+date: 2024-04-15 00:00:00
 
 ---
 
