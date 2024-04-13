@@ -13,7 +13,7 @@ layout: none
 
   <!-- Function Pages -->
   {% for fn in site.functions %}
-  {% unless fn.published == false && fn.live != false %}
+  {% unless fn.published == false || fn.frontpage == false %}
   <url>
     <loc>{{ site.url }}{{ fn.url }}</loc>
     <lastmod>{{ fn.date | date_to_xmlschema }}</lastmod>
