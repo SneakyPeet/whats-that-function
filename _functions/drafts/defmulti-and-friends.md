@@ -1,8 +1,8 @@
 ---
-title: clojure.core/comment
+title: clojure.core defmulti and friends
 description: TODO
 layout: fn
-fn: comment
+fn: defmulti + friends
 lib: clojure.core
 programming_language: clojure
 backgroundcolor: ""
@@ -11,82 +11,56 @@ fncolor: "TODO"
 youtube: TODO
 published: false
 frontpage: false
-date: 2024-04-02 00:00:00
+date: 2024-04-24 00:00:00
 
 ---
 
-Contains? is a predicate function that returns `true` if the provided collection contains the provided key.
+defmulti
 
-## Example 1
+(defmacro defmethod
+  "Creates and installs a new method of multimethod associated with dispatch-value. "
+  {:added "1.0"}
+  [multifn dispatch-val & fn-tail]
+  `(. ~(with-meta multifn {:tag 'clojure.lang.MultiFn}) addMethod ~dispatch-val (fn ~@fn-tail)))
 
-Its simplest use case is checking if a hash set contains a value.
+(defn remove-all-methods
+  "Removes all of the methods of multimethod."
+  {:added "1.2"
+   :static true} 
+ [^clojure.lang.MultiFn multifn]
+ (.reset multifn))
 
-```clojure
-(contains?
-  #{"Ann" "John" "Matt"}
-  "Matt")
+(defn remove-method
+  "Removes the method of multimethod associated with dispatch-value."
+  {:added "1.0"
+   :static true}
+ [^clojure.lang.MultiFn multifn dispatch-val]
+ (. multifn removeMethod dispatch-val))
 
-=> true
-```
+(defn prefer-method
+  "Causes the multimethod to prefer matches of dispatch-val-x over dispatch-val-y 
+   when there is a conflict"
+  {:added "1.0"
+   :static true}
+  [^clojure.lang.MultiFn multifn dispatch-val-x dispatch-val-y]
+  (. multifn preferMethod dispatch-val-x dispatch-val-y))
 
-## Example 2
+(defn methods
+  "Given a multimethod, returns a map of dispatch values -> dispatch fns"
+  {:added "1.0"
+   :static true}
+  [^clojure.lang.MultiFn multifn] (.getMethodTable multifn))
 
-Or if a hash map contains a certain key.
+(defn get-method
+  "Given a multimethod and a dispatch value, returns the dispatch fn
+  that would apply to that value, or nil if none apply and no default"
+  {:added "1.0"
+   :static true}
+  [^clojure.lang.MultiFn multifn dispatch-val] (.getMethod multifn dispatch-val))
 
-```clojure
-(contains?
-  {:name "Peter" :surname "Johnson"}
-  :name)
+(defn prefers
+  "Given a multimethod, returns a map of preferred value -> set of other values"
+  {:added "1.0"
+   :static true}
+  [^clojure.lang.MultiFn multifn] (.getPreferTable multifn))
 
-=> true
-```
-
-## Example 3
-
-Contains? can also be used with any keyed sequence, like vectors.
-
-```clojure
-(contains?
-  [1 3 5]
-  1)
-
-=> true
-```
-
-However, it is important to remember that contains? cares about keys or indexes, not values. So in this example, even though 5 is a value in the vector, the vector only has 3 indexes namely 0, 1 and 2.
-
-```clojure
-(contains?
-  [1 3 5]
-  5)
-
-=> false
-```
-
-## Example 4
-
-The same goes for strings.
-
-```clojure
-(contains? "abcde" 2)
-
-=> true
-```
-
-```clojure
-(contains? "abcde" \a)
-
-=> IllegalArgumentException
-```
-
-## Example 5
-
-Contains? can also be used for Java arrays, however not for Clojure lists or queues as these are not keyed sequences.
-
-```clojure
-(contains?
-  (list "a" "b" "c")
-  2)
-
-=> IllegalArgumentException
-```

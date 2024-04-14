@@ -1,15 +1,15 @@
 ---
 title: clojure.core/into
-description: TODO
+description: into is a clojure.core function that takes 2 collections, and conjoins the items from the second collection into the first collection, returning a collection of the same type as the first collection.
 layout: fn
 fn: into
 lib: clojure.core
 programming_language: clojure
-backgroundcolor: ""
-headingcolor: ""
-fncolor: "TODO"
+backgroundcolor: "#f5ff74"
+headingcolor: "#7de6a1"
+fncolor: "#c78bf9"
 youtube: TODO
-published: false
+published: true
 frontpage: false
 date: 2024-04-19 00:00:00
 
@@ -58,7 +58,7 @@ A list as the first collection, will add sorted items in reverse order to the fr
 (into '(1 2 3) [4 5 6])
 (into '(1 2 3) '(4 5 6))
 
-=> '(6 5 4 1 2 3)'
+=> '(6 5 4 1 2 3)
 
 ```
 
@@ -78,9 +78,9 @@ Having a hash-map as the second collection, will split the hash-map into key val
 You can use into to conjoin key value pairs into a hash-map
 
 ```clojure
-(into {:a 1} [[:a 2] [:b 3]])
+(into {} [[:a 1] [:b 2] [:c 3]])
 
-=> {:a 2 :b 2}
+=> {:a 1 :b 2 :c 3}
 ```
 
 As seen in the [juxt](/clojure.core/juxt) video this can be useful to build up lookup tables.
@@ -125,6 +125,6 @@ into can optionally take a transducer as the second argument. The second collect
 Finally given no arguments, into returns an empty vector and given 1 argument, into returns that argument
 
 ```clojure
+(into) ;=> []
 (into :anything) ;=> :anything
-(into [1 2 3]) ;=> [1 2 3]
 ```
