@@ -8,9 +8,9 @@ programming_language: clojure
 backgroundcolor: "#7de6a1"
 headingcolor: "#f9f88b"
 fncolor: "#f9646e"
-youtube: TODO
+youtube: https://www.youtube.com/embed/J2ae-ttSCjs?si=nB_JgEBxsEjlxqvh
 published: true
-frontpage: false
+frontpage: true
 date: 2024-04-15 00:00:00
 
 ---
