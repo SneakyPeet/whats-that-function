@@ -8,10 +8,10 @@ programming_language: clojure
 backgroundcolor: "#f5ff74"
 headingcolor: "#7de6a1"
 fncolor: "#c78bf9"
-youtube: TODO
-published: false
-frontpage: false
-date: 2024-04-19 00:00:00
+youtube: https://www.youtube.com/embed/xTugbF4A1ds?si=llxHmddS76KboY5_
+published: true
+frontpage: true
+date: 2024-04-23 00:00:00
 
 ---
 
@@ -101,7 +101,7 @@ As seen in the [juxt](/clojure.core/juxt) video this can be useful to build up l
 
 ```
 
-# Example 5
+## Example 5
 
 If the second collection is a hash-map or collection of hash-maps, the key values are merged with the first hash-map.
 
@@ -120,7 +120,7 @@ into can optionally take a transducer as the second argument. The second collect
 => [1 2 3 4 5 7 9]
 ```
 
-# Example 7
+## Example 7
 
 Finally given no arguments, into returns an empty vector and given 1 argument, into returns that argument
 
